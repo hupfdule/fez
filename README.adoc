@@ -10,9 +10,13 @@ Marco Herrn <marco@mherrn.de>
 :guava-homepage: https://github.com/google/guava
 :fez-version: 1.0.0
 
+[.float-group]
+--
+image:fez-icon.svg[Fez,role="right", width="75"]
 Fez
 
 Helper methods for Java.
+--
 
 
 What is Fez
