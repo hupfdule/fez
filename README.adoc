@@ -1,0 +1,62 @@
+Fez
+===
+Marco Herrn <marco@mherrn.de>
+2018-05-14
+//:toc:
+:homepage: https://github.com/hupfdule/fez
+:download-page: https://github.com/hupfdule/fez/releases
+:license-link: https://github.com/hupfdule/fez/blob/master/LICENSE-2.0.html
+:javadoc-link: https://javadoc.io/doc/de.poiu.fez/fez
+:guava-homepage: https://github.com/google/guava
+:fez-version: 1.0.0
+
+Fez
+
+Helper methods for Java.
+
+
+What is Fez
+-----------
+
+Fez provides some utility classes to provide small helper methods for Java
+that are not already provided in the JDK or by {guava-homepage}[Guava].
+
+Currently only one class is provided with some helper methods for checking
+method parameter values.
+
+
+Prerequisites
+-------------
+
+Fez has no runtime dependencies on other libraries.
+
+Fez can be used with Java 6 or higher.
+
+
+Installation
+------------
+
+To use Fez in a maven based project use the following maven coordinates:
+
+    <dependency>
+      <groupId>de.poiu.fez</groupId>
+      <artifactId>fez</artifactId>
+      <version>{fez-version}</version>
+    <dependency>
+
+Otherwise download the jar-file of Fez from the {download-page}[Download
+page] and put it into the classpath of your application.
+
+
+Usage
+-----
+
+See the {javadoc-link}[Javadoc] for the available classes and helper
+methods.
+
+
+License
+-------
+
+Fez is licensed under the terms of the link:{license-link}[Apache license
+2.0].
