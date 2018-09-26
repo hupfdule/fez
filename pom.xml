@@ -3,7 +3,7 @@
 
   <groupId>de.poiu.fez</groupId>
   <artifactId>fez</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>fez</name>
   <description>Helper methods for Java</description>
   <url>https://github.com/hupfdule/fez</url>
@@ -19,7 +19,7 @@
     <url>https://github.com/hupfdule/fez</url>
     <connection>scm:git:git://github.com/hupfdule/fez.git</connection>
     <developerConnection>scm:git:git@github.com:hupfdule/fez.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>fez-1.0.0</tag>
   </scm>
 
   <issueManagement>
