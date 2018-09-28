@@ -8,6 +8,7 @@ Marco Herrn <marco@mherrn.de>
 :license-link: https://github.com/hupfdule/fez/blob/master/LICENSE-2.0.html
 :javadoc-link: https://javadoc.io/doc/de.poiu.fez/fez
 :guava-homepage: https://github.com/google/guava
+:source-highlighter: prettify
 :fez-version: 1.0.0
 
 [.float-group]
@@ -42,11 +43,14 @@ Installation
 
 To use Fez in a maven based project use the following maven coordinates:
 
+[source,xml,subs="verbatim,attributes"]
+----
     <dependency>
       <groupId>de.poiu.fez</groupId>
       <artifactId>fez</artifactId>
       <version>{fez-version}</version>
     <dependency>
+----
 
 Otherwise download the jar-file of Fez from the {download-page}[Download
 page] and put it into the classpath of your application.
