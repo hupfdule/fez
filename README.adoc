@@ -5,7 +5,7 @@ Marco Herrn <marco@mherrn.de>
 //:toc:
 :homepage: https://github.com/hupfdule/fez
 :download-page: https://github.com/hupfdule/fez/releases
-:license-link: https://github.com/hupfdule/fez/blob/master/LICENSE-2.0.html
+:license-link: https://github.com/hupfdule/fez/blob/master/LICENSE.txt
 :javadoc-link: https://javadoc.io/doc/de.poiu.fez/fez
 :guava-homepage: https://github.com/google/guava
 :source-highlighter: prettify
