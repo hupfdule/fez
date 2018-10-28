@@ -16,6 +16,8 @@
 package de.poiu.fez;
 
 import java.util.Collection;
+import java.util.Objects;
+import java.util.function.Supplier;
 
 
 /**
@@ -273,5 +275,35 @@ public class Require {
       throw new IllegalArgumentException(message);
     }
     return expression;
+  }
+
+
+  /* * * The methods below just call the corresponding methods in java.util.Objects. * * */
+
+
+  /**
+   *
+   * @see java.util.Objects#requireNonNull(java.lang.Object)
+   */
+  public static  <T> T  nonNull(final T obj) {
+    return Objects.requireNonNull(obj);
+  }
+
+
+  /**
+   *
+   * @see java.util.Objects#requireNonNull(java.lang.Object, java.lang.String)
+   */
+  public static  <T> T  nonNull(final T obj, final String message) {
+    return Objects.requireNonNull(obj, message);
+  }
+
+
+  /**
+   *
+   * @see java.util.Objects#requireNonNull(java.lang.Object, java.util.function.Supplier)
+   */
+  public static  <T> T  nonNull(final T obj, final Supplier<String> messageSupplier) {
+    return Objects.requireNonNull(obj, messageSupplier);
   }
 }
