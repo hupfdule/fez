@@ -9,7 +9,7 @@ Marco Herrn <marco@mherrn.de>
 :javadoc-link: https://javadoc.io/doc/de.poiu.fez/fez
 :guava-homepage: https://github.com/google/guava
 :source-highlighter: prettify
-:fez-version: 1.0.0
+:fez-version: 1.1.0
 
 [.float-group]
 --
@@ -26,8 +26,15 @@ What is Fez
 Fez provides some utility classes to provide small helper methods for Java
 that are not already provided in the JDK or by {guava-homepage}[Guava].
 
-Currently only one class is provided with some helper methods for checking
-method parameter values.
+Currently the following classes are provided by Fez:
+
+Require:: Helper class for checking method parameter values.
+ResettableTimer:: Timer class that allows resetting the time for the next
+execution.
+NamedThreadFactor:: A ThreadFactor that allows specifying a name prefix for
+easier identification of created threads. This is mainly to be used with an
+ExecutorService
+Trigger:: A simple Trigger class to trigger some execution.
 
 
 Prerequisites

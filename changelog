@@ -1,6 +1,17 @@
 Fez changelog
 =============
 
+Version 1.1.0 - 2018-11-09
+--------------------------
+
+ - Added new classes:
+	 - NamedThreadFactory
+	 - ResettableTimer
+   - Trigger
+ - Added new methods:
+   - Require#nonNull(...)
+
+
 Version 1.0.0 - 2018-09-26
 --------------------------
 
