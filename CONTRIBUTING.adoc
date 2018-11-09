@@ -12,8 +12,8 @@ This helps avoiding duplicate work or your changes being refused for some reason
 
 === Website
 
-What is currently missing is a useful website. Anyone with some skills in web design who is willing to contribute 
-to such a website is highly welcome. 
+What is currently missing is a useful website. Anyone with some skills in web design who is willing to contribute
+to such a website is highly welcome.
 
 === Finding bugs
 
@@ -21,7 +21,7 @@ Of course Fez has bugs. If you find them please file an https://github.com/hupfd
 
 === Writing code
 
-Before writing some code you should definitely <<Contact,contact us>> before writing anything. 
+Before writing some code you should definitely <<Contact,contact us>> before writing anything.
 This allows us to find out whether your contribution can be included in Fez and possibly saves you some fruitless work.
 
 When writing some code please follow our https://hupfdule.github.io/styleguide/javaguide.html[code conventions].
