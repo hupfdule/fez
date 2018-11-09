@@ -14,11 +14,12 @@ import java.util.logging.Logger;
  * A Timer that allows single or periodic execution in the future and has the ability
  * to reset the time for the next execution.
  * <p>
- * To actually start the scheduling, the {@link #reset(boolean) } method must be called.
+ * To actually start the scheduling, the {@link #reset(boolean)} method must be called.
  * <p>
  * It is possible to restart the scheduling again, even after cancelling it.
  * <p>
- * This class was very much inspired by https://stackoverflow.com/a/2142661/572645.
+ * This class was very much inspired by
+ * <a href="https://stackoverflow.com/a/2142661/572645" target="_top">https://stackoverflow.com/a/2142661/572645</a>.
  *
  * @author mherrn
  */
@@ -45,6 +46,7 @@ public class ResettableTimer {
 
   /**
    * Creates a new ResettableTimer with a SingleThreadScheduledExecutor
+   *
    * @param task
    * @param delay
    * @param period
@@ -58,6 +60,7 @@ public class ResettableTimer {
 
   /**
    * Creates a new ResettableTimer with a SingleThreadScheduledExecutor
+   *
    * @param task
    * @param delay
    * @param period
@@ -162,7 +165,8 @@ public class ResettableTimer {
 
   /**
    * Starts the timer.
-   * @return
+   *
+   * @return this ResettableTimer
    * @throws IllegalStateException if the timer was already startet
    */
   public ResettableTimer start() {
@@ -205,7 +209,8 @@ public class ResettableTimer {
   /**
    * Starts the timer. This method differs from {@link #start() } in that it
    * does not throw an {@link IllegalStateException} if the timer was already started.
-   * @return
+   *
+   * @return this ResettableTimer
    */
   public ResettableTimer startIfNotStarted() {
     synchronized(this.futureRef){
@@ -247,8 +252,9 @@ public class ResettableTimer {
 
   /**
    * Resets the timer.
+   *
    * @param mayInterruptIfRunning whether to try to interrupt an already running execution
-   * @return
+   * @return this ResettableTimer
    */
   public ResettableTimer reset(boolean mayInterruptIfRunning) {
     synchronized(this.futureRef){
@@ -290,8 +296,9 @@ public class ResettableTimer {
 
   /**
    * Cancels the timer.
+   *
    * @param mayInterruptIfRunning whether to try to interrupt an already running execution
-   * @return
+   * @return this ResettableTimer
    */
   public ResettableTimer cancel(boolean mayInterruptIfRunning){
     synchronized(this.futureRef){
