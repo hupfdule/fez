@@ -1,5 +1,6 @@
 package de.poiu.fez;
 
+import de.poiu.fez.nullaway.Nullable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -9,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static de.poiu.fez.nullaway.NullawayHelper.castToNonNull;
 
 /**
  * A Timer that allows single or periodic execution in the future and has the ability
@@ -34,6 +37,7 @@ public class ResettableTimer {
   }
 
   private final ScheduleType scheduleType;
+  @Nullable
   private ScheduledExecutorService executorService;
   private final long initialDelay;
   private final long period;
@@ -41,6 +45,7 @@ public class ResettableTimer {
   private final Runnable task;
   // use AtomicReference to manage concurrency in case reset() gets called from different threads
   private final AtomicReference<ScheduledFuture<?>> futureRef= new AtomicReference();
+  @Nullable
   private final String name;
 
 
@@ -67,7 +72,12 @@ public class ResettableTimer {
    * @param timeUnit
    * @see ScheduledExecutorService#scheduleAtFixedRate(java.lang.Runnable, long, long, java.util.concurrent.TimeUnit)
    */
-  private ResettableTimer(final ScheduleType scheduleType, final long delay, final long period, final TimeUnit timeUnit, final Runnable task, final String name) {
+  private ResettableTimer(final ScheduleType scheduleType,
+                          final long delay,
+                          final long period,
+                          final TimeUnit timeUnit,
+                          final Runnable task,
+                          @Nullable final String name) {
     this.scheduleType= scheduleType;
     this.initialDelay= delay;
     this.period= period;
@@ -198,8 +208,8 @@ public class ResettableTimer {
           throw new IllegalStateException("Unexpected ScheduleType: "+scheduleType);
       }
 
-      shutdownAfterCompletion(this.futureRef.get());
-
+      shutdownAfterCompletion(castToNonNull(this.futureRef.get()));
+      
     }
 
     return this;
@@ -242,7 +252,7 @@ public class ResettableTimer {
           throw new IllegalStateException("Unexpected ScheduleType: "+scheduleType);
       }
 
-      shutdownAfterCompletion(this.futureRef.get());
+      shutdownAfterCompletion(castToNonNull(this.futureRef.get()));
 
     }
 
@@ -286,7 +296,7 @@ public class ResettableTimer {
           throw new IllegalStateException("Unexpected ScheduleType: "+scheduleType);
       }
 
-      shutdownAfterCompletion(this.futureRef.get());
+      shutdownAfterCompletion(castToNonNull(this.futureRef.get()));
 
     }
 

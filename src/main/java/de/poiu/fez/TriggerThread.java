@@ -1,5 +1,6 @@
 package de.poiu.fez;
 
+import de.poiu.fez.nullaway.Nullable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,6 +57,7 @@ class TriggerThread {
       LOGGER.log(Level.FINE, "Thread {0} has ended", threadName);
     }
   };
+  @Nullable
   private Thread triggerThread;
 
 
